@@ -7,795 +7,107 @@
     <title>FA.FINANZAS - Bienvenido</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #000000;
-            background-image: 
-                radial-gradient(circle 1000px at 20% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 100%),
-                radial-gradient(circle 800px at 80% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 100%);
-            background-attachment: fixed;
-            color: #ffffff;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        main {
-            position: relative;
-            z-index: 1;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ==================== MARQUEE SECTION ==================== */
-        .marquee-section {
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.9) 100%);
-            border-bottom: 2px solid #FFD700;
-            padding: 20px 0;
-            overflow: hidden;
-            position: relative;
-            z-index: 101;
-        }
-
-        .marquee-content {
-            display: flex;
-            white-space: nowrap;
-            animation: scroll-horizontal 20s linear infinite;
-        }
-
-        .marquee-text {
-            font-family: 'Poppins', sans-serif;
-            font-size: 32px;
-            font-weight: 900;
-            color: #FFD700;
-            margin-right: 100px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .marquee-text .highlight {
-            color: #00FF88;
-            margin: 0 20px;
-        }
-
-        @keyframes scroll-horizontal {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* ==================== HEADER BANNER ==================== */
-        .header-banner {
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            animation: slideDown 0.8s ease-out;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .badge-label {
-            color: #a0a0a0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .badge-value {
-            color: #00FF88;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .header-center {
-            text-align: center;
-            flex: 1;
-        }
-
-        .header-center h3 {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: #ffffff;
-        }
-
-        .header-center p {
-            font-size: 13px;
-            color: #00FF88;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .logo-header {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .logo-header .gold {
-            color: #FFD700;
-        }
-
-        /* ==================== HERO SECTION ==================== */
-        .hero {
-            padding: 80px 0 120px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 80px;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* ==================== HERO TEXT ==================== */
-        .hero-text {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero-subtitle {
-            font-size: 16px;
-            font-weight: 600;
-            color: #00FF88;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .hero-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(64px, 15vw, 120px);
-            font-weight: 900;
-            line-height: 1.05;
-            margin-bottom: 32px;
-            letter-spacing: -2px;
-            background: linear-gradient(135deg, #ffffff 0%, #ffffff 60%, #00FF88 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-        }
-
-        .title-bienvenido {
-            color: #00FF88;
-            font-weight: 900;
-        }
-
-        .title-break {
-            display: block;
-            height: 10px;
-        }
-
-        .title-comunidad {
-            color: #ffffff;
-            font-weight: 900;
-        }
-
-        .hero-description {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #d0d0d0;
-            margin-bottom: 0;
-        }
-
-        .description-highlight {
-            color: #00FF88;
-            font-weight: 700;
-        }
-
-        /* ==================== HERO IMAGE ==================== */
-        .hero-image {
-            position: relative;
-            animation: fadeInUp 1.2s ease-out;
-        }
-
-        .image-wrapper {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 2px solid rgba(0, 255, 136, 0.3);
-            box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .image-wrapper:hover {
-            border-color: rgba(0, 255, 136, 0.6);
-            box-shadow: 0 0 60px rgba(0, 255, 136, 0.25);
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Placeholder para imagen */
-        .image-placeholder {
-            width: 100%;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 255, 255, 0.05) 100%);
-            aspect-ratio: 4/5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 64px;
-            border-radius: 16px;
-        }
-
-        /* ==================== STEPS SECTION ==================== */
-        .steps-section {
-            padding: 80px 0;
-            animation: fadeInUp 1.4s ease-out;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(32px, 6vw, 56px);
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            font-size: 16px;
-            color: #a0a0a0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 24px;
-            margin-bottom: 60px;
-        }
-
-        .step-card {
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .step-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .step-card:hover {
-            border-color: rgba(255, 215, 0, 0.7);
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
-            transform: translateY(-8px);
-        }
-
-        .step-card:hover::before {
-            opacity: 1;
-        }
-
-        .step-number {
-            font-family: 'Poppins', sans-serif;
-            font-size: 56px;
-            font-weight: 900;
-            color: #FFD700;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .step-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #ffffff;
-            line-height: 1.6;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Info Box */
-        .info-box {
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 255, 255, 0.05) 100%);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-            border-radius: 16px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .info-text {
-            color: #b0b0b0;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-
-        .info-highlight {
-            font-family: 'Poppins', sans-serif;
-            font-size: 42px;
-            font-weight: 900;
-            color: #00FF88;
-            margin-bottom: 8px;
-            text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-        }
-
-        /* ==================== VIDEO SECTION ==================== */
-        .video-section {
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 255, 136, 0.15);
-            border-radius: 24px;
-            padding: 80px 40px;
-            text-align: center;
-            margin-bottom: 80px;
-            animation: fadeInUp 1.6s ease-out;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(32px, 6vw, 48px);
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
-        .video-description {
-            font-size: 16px;
-            color: #a0a0a0;
-            margin-bottom: 40px;
-        }
-
-        .play-button {
-            width: 100px;
-            height: 100px;
-            border: 3px solid #00FF88;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            animation: pulse-ring 2s infinite;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .play-button:hover {
-            background: rgba(0, 255, 136, 0.1);
-            transform: scale(1.1);
-        }
-
-        /* ==================== CTA SECTION ==================== */
-        .cta-section {
-            text-align: center;
-            padding: 80px 0;
-            animation: fadeInUp 1.8s ease-out;
-        }
-
-        .cta-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(36px, 8vw, 64px);
-            font-weight: 900;
-            margin-bottom: 24px;
-        }
-
-        .cta-section .subtitle {
-            font-size: 20px;
-            color: #d0d0d0;
-            margin-bottom: 40px;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #00FF88, #00FFFF);
-            color: #000000;
-            border: none;
-            padding: 18px 56px;
-            font-size: 18px;
-            font-weight: 800;
-            border-radius: 50px;
-            cursor: pointer;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.4);
-        }
-
-        .cta-button:active {
-            transform: translateY(-2px);
-        }
-
-        .cta-text {
-            color: #808080;
-            font-size: 14px;
-            margin-top: 16px;
-            letter-spacing: 0.5px;
-        }
-
-        /* ==================== FOOTER ==================== */
-        footer {
-            border-top: 1px solid rgba(0, 255, 136, 0.15);
-            padding: 40px 0;
-            text-align: center;
-            color: #606060;
-            font-size: 13px;
-            margin-top: 80px;
-        }
-
-        /* ==================== ANIMATIONS ==================== */
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse-ring {
-            0%, 100% {
-                box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4);
-            }
-            50% {
-                box-shadow: 0 0 0 20px rgba(0, 255, 136, 0);
-            }
-        }
-
-        /* ==================== RESPONSIVE ==================== */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .header-left {
-                flex-direction: column;
-                gap: 12px;
-                width: 100%;
-                text-align: center;
-            }
-
-            .header-center {
-                width: 100%;
-            }
-
-            .hero {
-                padding: 60px 0 80px;
-            }
-
-            .hero-title {
-                font-size: 56px;
-                margin-bottom: 16px;
-            }
-
-            .hero-description {
-                font-size: 16px;
-                margin-bottom: 32px;
-            }
-
-            .section-header h2 {
-                font-size: 36px;
-            }
-
-            .steps-grid {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 16px;
-            }
-
-            .step-number {
-                font-size: 42px;
-            }
-
-            .step-title {
-                font-size: 13px;
-            }
-
-            .video-section {
-                padding: 60px 24px;
-                min-height: 400px;
-            }
-
-            .info-highlight {
-                font-size: 32px;
-            }
-
-            .cta-section {
-                padding: 60px 0;
-            }
-
-            .cta-button {
-                padding: 16px 40px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-
-            .header-banner {
-                padding: 16px 0;
-            }
-
-            .header-content {
-                padding: 0 16px;
-            }
-
-            .hero {
-                padding: 40px 0 60px;
-            }
-
-            .hero-title {
-                font-size: 42px;
-                margin-bottom: 16px;
-                letter-spacing: -1px;
-            }
-
-            .hero-description {
-                font-size: 15px;
-                margin-bottom: 24px;
-            }
-
-            .image-wrapper {
-                border-radius: 12px;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-
-            .step-card {
-                padding: 24px 16px;
-            }
-
-            .step-number {
-                font-size: 36px;
-            }
-
-            .step-title {
-                font-size: 12px;
-            }
-
-            .info-box {
-                padding: 24px 16px;
-                margin-bottom: 60px;
-            }
-
-            .info-highlight {
-                font-size: 28px;
-            }
-
-            .video-section {
-                padding: 40px 16px;
-                min-height: 350px;
-            }
-
-            .play-button {
-                width: 80px;
-                height: 80px;
-                font-size: 36px;
-            }
-
-            .cta-section {
-                padding: 40px 0;
-            }
-
-            .cta-section h2 {
-                font-size: 32px;
-                margin-bottom: 16px;
-            }
-
-            .cta-section .subtitle {
-                font-size: 16px;
-                margin-bottom: 24px;
-            }
-
-            .cta-button {
-                padding: 14px 32px;
-                font-size: 14px;
-            }
-
-            .hero-content {
-                gap: 40px;
-            }
-
-            .section-header h2 {
-                font-size: 28px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #000000; background-image: radial-gradient(circle 1000px at 20% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 100%), radial-gradient(circle 800px at 80% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 100%); background-attachment: fixed; color: #ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; min-height: 100vh; }
+        main { position: relative; z-index: 1; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .marquee-section { background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.9) 100%); border-bottom: 2px solid #FFD700; padding: 20px 0; overflow: hidden; position: relative; z-index: 101; }
+        .marquee-content { display: flex; white-space: nowrap; animation: scroll-horizontal 20s linear infinite; }
+        .marquee-text { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 900; color: #FFD700; margin-right: 100px; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+        .marquee-text .highlight { color: #00FF88; margin: 0 20px; }
+        @keyframes scroll-horizontal { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .hero { padding: 60px 0 80px; position: relative; overflow: hidden; }
+        .hero-content { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; position: relative; z-index: 2; }
+        .hero-text { animation: fadeInUp 1s ease-out; }
+        .hero-title { font-family: 'Poppins', sans-serif; font-size: clamp(36px, 6vw, 64px); font-weight: 900; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px; background: linear-gradient(135deg, #ffffff 0%, #ffffff 60%, #00FF88 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; flex-direction: column; gap: 0; }
+        .title-bienvenido { color: #00FF88; font-weight: 900; }
+        .title-break { display: block; height: 6px; }
+        .title-comunidad { color: #ffffff; font-weight: 900; }
+        .hero-description { font-size: 18px; line-height: 1.8; color: #d0d0d0; margin-bottom: 0; }
+        .description-highlight { color: #00FF88; font-weight: 700; }
+        .hero-image { position: relative; animation: fadeInUp 1.2s ease-out; }
+        .image-wrapper { position: relative; border-radius: 20px; overflow: hidden; border: 2px solid rgba(0, 255, 136, 0.3); box-shadow: 0 0 40px rgba(0, 255, 136, 0.15); transition: all 0.3s ease; }
+        .image-wrapper:hover { border-color: rgba(0, 255, 136, 0.6); box-shadow: 0 0 60px rgba(0, 255, 136, 0.25); }
+        .image-wrapper img { width: 100%; height: auto; display: block; }
+        .step-label { font-family: 'Poppins', sans-serif; font-size: clamp(20px, 3vw, 28px); font-weight: 900; color: #FFD700; text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+        .video-section { background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(0, 255, 136, 0.15); border-radius: 24px; padding: 60px 40px; text-align: center; margin-bottom: 60px; animation: fadeInUp 1.6s ease-out; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .video-section h2 { font-family: 'Poppins', sans-serif; font-size: clamp(24px, 4vw, 36px); font-weight: 800; margin-bottom: 12px; }
+        .video-description { font-size: 16px; color: #a0a0a0; margin-bottom: 40px; }
+        .play-button { width: 100px; height: 100px; border: 3px solid #00FF88; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 48px; animation: pulse-ring 2s infinite; cursor: pointer; transition: all 0.3s ease; }
+        .play-button:hover { background: rgba(0, 255, 136, 0.1); transform: scale(1.1); }
+        .info-box { background: linear-gradient(135deg, rgba(0, 255, 136, 0.08) 0%, rgba(0, 255, 255, 0.05) 100%); border: 1px solid rgba(0, 255, 136, 0.2); border-radius: 16px; padding: 40px; text-align: center; margin-bottom: 80px; }
+        .info-text { color: #b0b0b0; margin-bottom: 8px; font-size: 16px; }
+        .info-highlight { font-family: 'Poppins', sans-serif; font-size: 42px; font-weight: 900; color: #00FF88; margin-bottom: 8px; text-shadow: 0 0 20px rgba(0, 255, 136, 0.3); }
+        .cta-section { text-align: center; padding: 80px 0; animation: fadeInUp 1.8s ease-out; }
+        .cta-section h2 { font-family: 'Poppins', sans-serif; font-size: clamp(36px, 8vw, 64px); font-weight: 900; margin-bottom: 24px; }
+        .cta-section .subtitle { font-size: 20px; color: #d0d0d0; margin-bottom: 40px; }
+        .cta-button { background: linear-gradient(135deg, #00FF88, #00FFFF); color: #000000; border: none; padding: 18px 56px; font-size: 18px; font-weight: 800; border-radius: 50px; cursor: pointer; display: inline-block; transition: all 0.3s ease; box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3); text-transform: uppercase; letter-spacing: 1px; font-family: 'Poppins', sans-serif; text-decoration: none; }
+        .cta-button:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0, 255, 136, 0.4); }
+        footer { border-top: 1px solid rgba(0, 255, 136, 0.15); padding: 40px 0; text-align: center; color: #606060; font-size: 13px; margin-top: 80px; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse-ring { 0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); } 50% { box-shadow: 0 0 0 20px rgba(0, 255, 136, 0); } }
+        @media (max-width: 1024px) { .hero-content { grid-template-columns: 1fr; gap: 60px; } .hero-image { order: -1; } }
+        @media (max-width: 768px) { .hero { padding: 40px 0 60px; } .hero-title { font-size: 40px; } .video-section { padding: 40px 24px; min-height: 350px; } .info-highlight { font-size: 32px; } .cta-button { padding: 16px 40px; font-size: 16px; } }
+        @media (max-width: 480px) { .container { padding: 0 16px; } .hero { padding: 30px 0 40px; } .hero-title { font-size: 32px; letter-spacing: -0.5px; } .image-wrapper { border-radius: 12px; } .info-box { padding: 24px 16px; } .info-highlight { font-size: 28px; } .video-section { padding: 30px 16px; min-height: 300px; } .play-button { width: 80px; height: 80px; font-size: 36px; } .cta-section h2 { font-size: 32px; } .cta-button { padding: 14px 32px; font-size: 14px; } }
     </style>
 </head>
 <body>
-    <!-- Marquee Section -->
-    <div class="marquee-section">
-        <div class="marquee-content">
-            <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
-            <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
-            <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
-        </div>
+<div class="marquee-section">
+    <div class="marquee-content">
+        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
+        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
+        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
     </div>
-
-    <!-- Header Banner - REMOVED -->
-
-    <main>
-        <div class="container">
-            <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            <span class="title-bienvenido">Bienvenido</span>
-                            <span class="title-break"></span>
-                            <span class="title-comunidad">A la Incubadora</span>
-                        </h1>
-                        <p class="hero-description">
-                            Todo lo que necesitas para <span class="description-highlight">empezar hoy</span> está aquí. 
-                            Acceso completo a la academia en solo <span class="description-highlight">3 pasos</span>.
-                        </p>
-                    </div>
-
-                    <div class="hero-image">
-                        <div class="image-wrapper">
-                            <img src="https://i.imgur.com/d817ehC.png" alt="Fabian Diaz">
-                        </div>
+</div>
+<main>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-bienvenido">Bienvenido</span>
+                        <span class="title-break"></span>
+                        <span class="title-comunidad">A la Incubadora</span>
+                    </h1>
+                    <p class="hero-description">
+                        Todo lo que necesitas para <span class="description-highlight">empezar hoy</span> est&#225; aqu&#237;. Acceso completo a la academia en solo <span class="description-highlight">3 pasos</span>.
+                    </p>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="https://i.imgur.com/d817ehC.png" alt="Fabian Diaz">
                     </div>
                 </div>
-            </section>
-
-            <!-- Video Section -->
-            <section class="video-section">
-                <h2>Video de Bienvenida</h2>
-                <p class="video-description">Mira esta introducción antes de continuar</p>
-                <div class="play-button">▶</div>
-            </section>
-
-            <!-- Steps Section -->
-            <section class="steps-section">
-                <div class="section-header">
-                    <h2>Siguientes pasos</h2>
-                    <p>Simple y rapido. El video de arriba te muestra el detalle de cada paso.</p>
-                </div>
-
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <span class="step-number">1</span>
-                        <div class="step-title">Ingresa al link de Skool que recibiste</div>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">2</span>
-                        <div class="step-title">Crea tu cuenta o inicia sesion en Skool</div>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">3</span>
-                        <div class="step-title">Verifica tu correo electronico</div>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">4</span>
-                        <div class="step-title">Completa tu perfil con foto y descripcion</div>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">5</span>
-                        <div class="step-title">Explora el Classroom</div>
-                    </div>
-                </div>
-
-                <div class="info-box">
-                    <div class="info-text">Tu acceso será aprobado dentro de las proximas</div>
-                    <div class="info-highlight">24 HORAS</div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="cta-section">
-                <h2>¿Viste el video completo?</h2>
-                <p class="subtitle">Accede a Skool <span class="description-highlight">ahora</span></p>
-                <a href="https://www.skool.com/fafinanzas-7575" target="_blank" rel="noopener noreferrer" class="cta-button">
-                    Acceder a Skool
-                </a>
-            </section>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <p>© 2025 FA.FINANZAS · Todos los derechos reservados</p>
             </div>
-        </footer>
-    </main>
+        </section>
+        <div class="step-label">PASO 1 - Acceder a SKOOL</div>
+        <section class="video-section">
+            <h2>Video de Bienvenida</h2>
+            <p class="video-description">Mira esta introducci&#243;n antes de continuar</p>
+            <div class="play-button">&#9654;</div>
+        </section>
+        <div class="step-label">PASO 2 - Acceder a la comunidad</div>
+        <section class="video-section">
+            <h2>Acceso a la Comunidad</h2>
+            <p class="video-description">Sigue estos pasos para unirte a la comunidad</p>
+            <div class="play-button">&#9654;</div>
+        </section>
+        <div class="info-box">
+            <div class="info-text">Tu acceso ser&#225; aprobado dentro de las proximas</div>
+            <div class="info-highlight">24 HORAS</div>
+        </div>
+        <section class="cta-section">
+            <h2>&#191;Viste el video completo?</h2>
+            <p class="subtitle">Accede a Skool <span class="description-highlight">ahora</span></p>
+            <a href="https://www.skool.com/fafinanzas-7575" target="_blank" rel="noopener noreferrer" class="cta-button">Acceder a Skool</a>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&#169; 2025 FA.FINANZAS &middot; Todos los derechos reservados</p>
+        </div>
+    </footer>
+</main>
 </body>
 </html>
