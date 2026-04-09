@@ -13,7 +13,7 @@
                     main { position: relative; z-index: 1; }
                     .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
                     .marquee-section { background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.9) 100%); border-bottom: 2px solid #FFD700; padding: 20px 0; overflow: hidden; position: relative; z-index: 101; }
-                    .marquee-content { display: flex; white-space: nowrap; animation: scroll-horizontal 20s linear infinite; }
+                    .marquee-content { display: flex; white-space: nowrap; justify-content: center; }
                     .marquee-text { font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 900; color: #FFD700; margin-right: 100px; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
                     .marquee-text .highlight { color: #00FF88; margin: 0 20px; }
                     @keyframes scroll-horizontal { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
@@ -55,9 +55,7 @@
     <body>
             <div class="marquee-section">
                         <div class="marquee-content">
-                                        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
-                                        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
-                                        <span class="marquee-text">Bienvenido a <span class="highlight">FA.FINANZAS</span></span>
+                                        <span class="marquee-text">BIENVENIDO A <span class="highlight">FA.FINANZAS</span></span>
                         </div>
             </div>
             <main>
